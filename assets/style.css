@@ -1,0 +1,87 @@
+body{
+    background-color: #edefe7;
+    justify-content: center;
+    align-items: center;
+}
+
+#navSuperior{
+    background-color: #000000;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    justify-content: space-between;
+    border-color: #000000;
+    border-width: .25rem;
+    border-style: solid;
+    display: flex;
+    width: 100%;
+}
+
+#wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+}
+
+
+#navbar{
+    background-color: #E71D36;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    justify-content: space-between;
+    border-color: #000000;
+    border-width: .25rem;
+    border-style: solid;
+    display: flex;
+    width: 85%;
+}
+
+a{
+    color: white;
+    font-size: 1rem;
+    font-family:'Red Hat Text', sans-serif;
+}
+
+a:hover{
+    color: #02faf2;
+    transition: all 0.3s ease-in-out;
+}
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+}
+
+h2{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.25rem;
+}
+
+#main{
+    background-color: #2EC4B6;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    justify-content: space-between;
+    border-color: #000000;
+    border-width: .25rem;
+    border-style: solid;
+    display: flex;
+    width: 85%;
+}
+
+
+
+p{
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 1rem;
+}
+
+#fotoYo{
+    border-color: #000000;
+    border-style: solid;
+    border-width: .25rem;
+}
