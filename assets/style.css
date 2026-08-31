@@ -1,20 +1,11 @@
 body{
-    background-color: #edefe7;
     justify-content: center;
     align-items: center;
-}
-
-#navSuperior{
-    background-color: #000000;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    justify-content: space-between;
-    border-color: #000000;
-    border-width: .25rem;
-    border-style: solid;
-    display: flex;
-    width: 100%;
+    background-color: #ebfeff;
+    opacity: 1;
+    background-image: repeating-linear-gradient(to right, transparent 0, transparent 3.8333333333333335px, #ebfeff 3.8333333333333335px, #ebfeff 11.5px, transparent 11.5px, transparent 15.333333333333334px), repeating-linear-gradient(to bottom, transparent 0, transparent 3.8333333333333335px, #ebfeff 3.8333333333333335px, #ebfeff 11.5px, transparent 11.5px, transparent 15.333333333333334px), linear-gradient(to bottom, #50EDBD 1.38px, transparent 1.38px), linear-gradient(to right, #50EDBD 1.38px, transparent 1.38px) ;
+    background-size: 100% 100%, 100% 100%, 46px 46px, 46px 46px;
+    background-position: 0 0, 0 0, 0 -0.46px, -0.46px 0;
 }
 
 #wrapper{
@@ -26,27 +17,35 @@ body{
 }
 
 
-#navbar{
-    background-color: #E71D36;
-    color: white;
+#top{
+    display: inline-flexbox;
+
+    color: black;
     padding: 1rem;
     text-align: center;
-    justify-content: space-between;
+    justify-content: center;
     border-color: #000000;
-    border-width: .25rem;
+    border-width: 3px;
     border-style: solid;
-    display: flex;
-    width: 85%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+#colNav{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 2fr));
+    gap: 10px;
 }
 
 a{
-    color: white;
+    color: #000000;
     font-size: 1rem;
     font-family:'Red Hat Text', sans-serif;
 }
 
 a:hover{
-    color: #02faf2;
+    color: #ffffff;
     transition: all 0.3s ease-in-out;
 }
 
@@ -61,16 +60,19 @@ h2{
 }
 
 #main{
-    background-color: #2EC4B6;
-    color: white;
+
+    color: black;
     padding: 1rem;
     text-align: left;
     justify-content: space-between;
-    border-color: #000000;
-    border-width: .25rem;
+    border: #000000;
+    border-width: 3px;
     border-style: solid;
-    display: flex;
-    width: 85%;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
 }
 
 
@@ -80,8 +82,20 @@ p{
     font-size: 1rem;
 }
 
+.col{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
 #fotoYo{
     border-color: #000000;
     border-style: solid;
     border-width: .25rem;
+    margin: .5rem;
+    max-width: 150px;
 }
+ a{
+    text-decoration: none;
+    
+ }
