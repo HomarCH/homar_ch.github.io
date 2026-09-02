@@ -1,47 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portafolio HomarCH</title>
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-        <nav id="top">
-            <div class="col">
-                <h1>Homar HC</h1>
+
+    <div class="background-grid"></div>
+
+    <nav class="navbar">
+        <div class="logo">Homar-CH</div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#about">Acerca de mí</a></li>
+            <li><a href="https://github.com/HomarCH" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/homarcarmona" target="_blank">LinkedIn</a></li>
+            <li><a href="#cv">CV</a></li>
+        </ul>
+
+        <div class="menu-btn">☰</div>
+    </nav>
+
+    <main class="bento-container" id="home">
+
+        <section class="card profile-photo">
+            <img src="/assets/img/java_developer_homar.png" alt="Foto de perfil de Homar Carmona">
+        </section>
+
+        <section class="card hero">
+            <h1>Homar Carmona</h1>
+            <h2>Java Full Stack Jr & Web Designer</h2>
+            <p>
+                Transformando ideas en experiencias digitales
+                funcionales, atractivas e innovadoras.
+            </p>
+        </section>
+
+        <section class="card about" id="about">
+            <h3>Acerca de mí</h3>
+            <p>
+                Desarrollador Java FullStack Jr y Diseñador Industrial
+                con preferencia por el diseño web, la experiencia de usuario
+                y el desarrollo de soluciones digitales modernas ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧
+            </p>
+        </section>
+
+        <section class="card projects" id="proyectos">
+            <h3>Proyectos</h3>
+
+            <div class="project-item" style="background-image: url('/assets/img/keso.png');">
+                <h4>Proyecto Keso Pastelería</h4>
+                <p>E-commerce para una pastelería local.</p>
+                <a style="color:white" href="https://github.com/aggressxve/keso-javahots.git" target="_blank">Enlace a Keso Pastelería (Repositorio).</a>
             </div>
-            <div class="col" id="colNav" style="gap: 1rem;">
-                <a>Inicio</a>
-                <a>Proyectos</a>
-                <a>Acerca de mí</a>
-                <a>CV</a>
-                <a href="https://github.com/HomarCH">GitHub</a>
-                <a href="https://www.linkedin.com/in/homarcarmona/">LinkedIn</a>
+
+            <div class="project-item" style="background-image: url('/assets/img/skatebros.png');">
+                <h4>Proyecto SkateBros</h4>
+                <p>E-commerce para una tienda de patinetas.</p>
+                <a style="color:white" href="https://jessra21.github.io/SkateBros/" target="_blank">Enlace a SkateBros.</a>
             </div>
-        </nav>
 
-  <div id="wrapper">
-        <div id="main">
-                <div class="col">
-                    <header>
-                        <h1>Homar Carmona Hinojosa</h1>
-                        <h2>Desarrollador Web</h2>
-                        <p>Hola, este es mi portafolio de trabajo. Me encanta el desarrollo de páginas web, sobre todo su diseño.</p>
-                    </header>
-                </div>
-                <div class="col">
-                    <img id ="fotoYo"src="assets/img/java_developer_homar.png" alt="foto Homar">
-                </div>
-        </div>
-  </div>
+            <div class="project-item" style="background-image: url('/assets/img/calc1.png.png');">
+                <h4>Proyecto: Calculadora</h4>
+                <p>Para convertir grados Celsius a Fahrenheit.</p>
+                <a style="color:white" href="https://homarch.github.io/conversor-de-temperatura.github.io/" target="_blank">Enlace a la calculadora.</a>
+            </div>
+        </section>
 
+        <section class="card github" id="github">
+            <h3>GitHub</h3>
+            <p>Consulta mis repositorios y proyectos.</p>
 
+            <a href="https://github.com/HomarCH" class="btn-neon">
+                Ver GitHub
+            </a>
+        </section>
+
+        <section class="card linkedin" id="linkedin">
+            <h3>LinkedIn</h3>
+            <p>Conecta conmigo profesionalmente.</p>
+
+            <a href="https://www.linkedin.com/in/homarcarmona" class="btn-neon">
+                Ver Perfil
+            </a>
+        </section>
+
+        <section class="card cv" id="cv">
+            <h3>Currículum</h3>
+            <p>Descarga mi CV actualizado.</p>
+
+            <a href="/assets/pdf/Homar-Carmona-Hinojosa-CV.pdf" download class="btn-neon">
+                Descargar CV
+            </a>
+        </section>
+
+        <section class="card skills" id="skills">
+            <div class="btn-neon">
+                <p>Java</p>
+            </div>
+            <div class="btn-neon">
+                <p>JavaScript</p>
+            </div>
+            <div class="btn-neon">
+                <p>HTML</p>
+            </div>
+            <div class="btn-neon">
+                <p>CSS</p>
+            </div>
+            <div class="btn-neon">
+                <p>Python</p>
+            </div>
+            <div class="btn-neon">
+                <p>Figma</p>
+            </div>
+            <div class="btn-neon">
+                <p>Illustrator</p>
+            </div>
+            <div class="btn-neon">
+                <p>SQL</p>
+            </div>
+            <div class="btn-neon">
+                <p>GitHub</p>
+            </div>
+            <div class="btn-neon">
+                <p>Bootstrap</p>
+            </div>
+            <div class="btn-neon">
+                <p>N8L</p>
+            </div>
+            <div class="btn-neon">
+                <p>Modelado 3D</p>
+            </div>
+            <div class="btn-neon">
+                <p>Illustrator</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
