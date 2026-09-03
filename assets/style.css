@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap');
 
 :root{
-    --bg:#050816;
+    --bg:#2a0b21;
     --card:#0b1224;
 
-    --cyan:#ff00b7;
-    --cyan-soft:#ff66d9;
+    --cyan:#ff008c;
+    --cyan-soft:#ff66c2;
 
-    --text:#f5faff;
+    --text:#ffb9da;
 
-    --border:rgba(255, 0, 183, .25);
+    --border:rgb(255, 84, 221);
 }
 *{
     margin:0;
@@ -33,8 +33,8 @@ body{
     position:fixed;
     inset:0;
     background:
-    linear-gradient(rgba(255,0,183,.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,0,183,.06) 1px, transparent 1px);
+    linear-gradient(rgba(255, 0, 183, 0.149) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 183, 0.149) 1px, transparent 1px);
     background-size:40px 40px;
     z-index:-1;
 }
@@ -49,9 +49,9 @@ body{
     align-items:center;
 
     padding:20px 5%;
-    backdrop-filter:blur(15px);
+    backdrop-filter:blur(5px);
 
-    background:rgba(5,8,22,.85);
+    background:rgba(5, 8, 22, 0);
     border-bottom:1px solid var(--border);
 }
 
@@ -111,26 +111,27 @@ body{
 }
 
 .card{
-    background:rgba(11,18,36,.85);
-    border:1px solid var(--border);
+    background:rgba(22, 5, 17, 0.351);
+    border:3px solid var(--border);
 
     border-radius:24px;
     padding:25px;
 
-    backdrop-filter:blur(12px);
+    backdrop-filter:blur(2px);
 
     box-shadow:
-        0 0 15px rgba(255,0,183,.12),
-        0 0 30px rgba(255,0,183,.08),
+        0 0 5px rgba(255, 0, 183, 0.47),
+        0 0 5px rgba(255, 0, 183, 0.47),
         inset 0 0 15px rgba(255,0,183,.05);
 }
 
 .card:hover{
-    transform:translateY(-5px);
+    transform:scale(1.01);
+    transition:.3s;
 
     box-shadow:
-        0 0 15px rgba(255,0,183,.4),
-        0 0 35px rgba(255,0,183,.25),
+        0 0 15px rgba(255, 21, 189, 0.674),
+        0 0 35px rgba(255, 11, 186, 0.403),
         0 0 60px rgba(255,0,183,.15);
 }
 
@@ -167,8 +168,7 @@ body{
 }
 
 #proyectos{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+    display:flex;
     gap:10px;
 }
 
@@ -205,6 +205,12 @@ body{
     font-family:'Orbitron',sans-serif;
     color:var(--cyan);
     margin-bottom:15px;
+}
+
+.projects-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:15px;
 }
 
 .project-item{
@@ -296,7 +302,14 @@ body{
         "cv"
         "skills";
     }
-
+    #proyectos{
+        display:flex;
+        flex-direction:column;
+    }
+    .projects-grid{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+    }
     .hero h1{
         font-size:2.2rem;
     }
