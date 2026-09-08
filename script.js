@@ -30,7 +30,7 @@ window.addEventListener("mousemove", (e) => {
 
         card.style.transform =
         `perspective(1000px)
-        rotateX(${rotateX * 0.1}deg)
-        rotateY(${rotateY * 0.1}deg)`;
+        rotateX(${rotateX * -0.1}deg)
+        rotateY(${rotateY * -0.1}deg)`;
     });
 });
