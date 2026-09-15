@@ -54,30 +54,80 @@
 
         <section class="card projects" id="proyectos">
             <h3>Proyectos</h3>
-        <div class="projects-grid">
-            <div class="project-item" style="background-image: url('./assets/img/poke_api.png');">
-                <h4>Proyecto API Pokédex</h4>
-                <p>Pokédex de consumo Api que muestra Pokémon y su información.</p>
-                <a style="color:white" href="https://homarch.github.io/pokedex-api/" target="_blank">Enlace a la Pokédex.</a>
-            </div>
-            <div class="project-item" style="background-image: url('./assets/img/keso.png');">
-                <h4>Proyecto Keso Pastelería</h4>
-                <p>E-commerce para una pastelería local.</p>
-                <a style="color:white" href="https://github.com/aggressxve/keso-javahots.git" target="_blank">Enlace a Keso Pastelería (Repositorio).</a>
+            <div class="carousel-container">
+                <!-- Slides -->
+                <div class="carousel-slides">
+                    <div class="slide">
+                        <div class="project-item">
+                            <img src="./assets/img/poke_api.png">
+                            <div>
+                            <h4>Proyecto API Pokédex</h4>
+                            <p>Pokédex de consumo Api que muestra Pokémon y su información.
+                            Utilicé la API de pokeapi.co para la información de cada Pokémon.<br>
+                            En este programa quise explorar más en estilizarlo con una estética
+                            alusiva a Pokémon y a el Pixel-art, teniendo en cuenta también la paleta de colores.</p>
+                            <p><a style="color:white" href="https://homarch.github.io/pokedex-api/" target="_blank">Enlace a la Pokédex.</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="project-item">
+                            <img src="./assets/img/keso.png">
+                            <div>
+                            <h4>Proyecto Keso Pastelería</h4>
+                            <p>E-commerce para una pastelería local.<br><br>
+                            Proyecto integrador realizado en equipo, en el que implementamos conocimientos tanto para el Front-end como el Back-end, 
+                            así como un flujo de trabajo utilizando SCRUM, GitHub y Kanban, en el cual también hicimos intercambio de roles para involucrarnos
+                            en distintos aspectos del proyecto.<br><br>
+                            Personalmente disfruté más la parte del Front-end, donde hicimos uso de herramientas como Figma y Bootstrap, para el diseño de cada
+                            página.
+                            </p>
+                            <p><a style="color:white" href="https://github.com/aggressxve/keso-javahots.git" target="_blank">Enlace a Keso Pastelería (Repositorio).</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="project-item">
+                            <img src="./assets/img/skatebros.png">
+                            <div>
+                            <h4>Proyecto de Hackatón: SkateBros</h4>
+                            <p>E-commerce para una tienda de patinetas.<br>
+                            Este proyecto fue el objetivo de un Hackatón, el cual consistió en trabajar en equipo para crear una E-commerce para una
+                            tienda de deportes, sólo que tomamos la decisión de orientarla al skateboarding, por lo que le dimos una imagen
+                            adecuada a ese deporte.<br>
+                            Este fue mi primer Hackatón, actividad que me dejó una experiencia gratificante y que también me generó mucho conocimiento.</p>
+                            <br><br>
+                            <a style="color:white" href="https://jessra21.github.io/SkateBros/" target="_blank">Enlace a SkateBros.</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="project-item">
+                            <h4>Proyecto: Calculadora</h4>
+                            <p>Para convertir grados Celsius a Fahrenheit.</p>
+                            <img src="./assets/img/calc1.png">
+                            <a style="color:white" href="https://homarch.github.io/conversor-de-temperatura.github.io/" target="_blank">Enlace a la calculadora.</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="project-item" style="background-image: url('./assets/img/skatebros.png');">
-                <h4>Proyecto SkateBros</h4>
-                <p>E-commerce para una tienda de patinetas.</p>
-                <a style="color:white" href="https://jessra21.github.io/SkateBros/" target="_blank">Enlace a SkateBros.</a>
-            </div>
+                <!-- Navigation Buttons -->
+                <button class="carousel-btn prev-btn" aria-label="Previous Slide">&#10094;</button>
+                <button class="carousel-btn next-btn" aria-label="Next Slide">&#10095;</button>
 
-            <div class="project-item" style="background-image: url('./assets/img/calc1.png');">
-                <h4>Proyecto: Calculadora</h4>
-                <p>Para convertir grados Celsius a Fahrenheit.</p>
-                <a style="color:white" href="https://homarch.github.io/conversor-de-temperatura.github.io/" target="_blank">Enlace a la calculadora.</a>
+                    <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                    <span class="dot" data-index="3"></span>
+                </div>
             </div>
-        </div>
 
         </section>
 
@@ -154,5 +204,6 @@
     </main>
 
     <script src="script.js"></script>
+    
 </body>
 </html>
