@@ -11,6 +11,7 @@
 
     --border:rgb(255, 84, 221);
 }
+
 *{
     margin:0;
     padding:0;
@@ -25,8 +26,16 @@ body{
     background:var(--bg);
     color:var(--text);
     font-family:'Inter',sans-serif;
-    max-height:100vh;
+
+
+    min-height:100vh;
     overflow-x:hidden;
+}
+
+img{
+    display:block;
+    max-width:100%;
+    height:auto;
 }
 
 .background-grid{
@@ -48,10 +57,10 @@ body{
     justify-content:space-between;
     align-items:center;
 
-    padding:20px 5%;
+    padding:12px 5%;
     backdrop-filter:blur(5px);
 
-    background:rgba(5, 8, 22, 0);
+    background:rgba(22, 5, 16, 0);
     border-bottom:1px solid var(--border);
 }
 
@@ -67,7 +76,7 @@ body{
 
 .nav-links{
     display:flex;
-    gap:25px;
+    gap:15px;
     list-style:none;
 }
 
@@ -87,54 +96,51 @@ body{
 
 .menu-btn{
     display:none;
-    font-size:1.5rem;
-    cursor:pointer;
 }
 
 .bento-container{
-    max-width:1400px;
-    margin:auto;
-    padding:40px;
-
-    display:grid;
-    gap:20px;
-
-    grid-template-columns:
-    repeat(4,1fr);
+    max-width:1100px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr;
 
     grid-template-areas:
-    "photo hero hero hero"
-    "about about about about"
-    "github projects projects projects"
-    "linkedin projects projects projects"
-    "cv projects projects projects"
-    "skills skills skills skills";
+        "photo"
+        "hero"
+        "about"
+        "projects"
+        "github"
+        "linkedin"
+        "cv"
+        "skills";
 }
 
 .card{
-    width: auto;
-    background:rgba(22, 5, 17, 0.351);
-    border:3px solid var(--border);
+    min-width: 300px;
+    background:rgba(22, 5, 16, 0);
+    border: 2px solid var(--border);
+    border-radius: 24px;
+    padding: 1rem;
 
-    border-radius:24px;
-    padding:25px;
-
-    backdrop-filter:blur(2px);
+    backdrop-filter: blur(2px);
 
     box-shadow:
-        0 0 5px rgba(255, 0, 183, 0.47),
-        0 0 5px rgba(255, 0, 183, 0.47),
+        0 0 5px rgba(255,0,183,.4),
         inset 0 0 15px rgba(255,0,183,.05);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
 }
 
 .card:hover{
-    transform:scale(1.01);
-    transition:.3s;
+    transform: translateY(-3px);
 
     box-shadow:
-        0 0 15px rgba(255, 21, 189, 0.674),
-        0 0 35px rgba(255, 11, 186, 0.403),
-        0 0 60px rgba(255,0,183,.15);
+        0 0 15px rgba(255,0,183,.6),
+        0 0 30px rgba(255,0,183,.25);
 }
 
 .foto{
@@ -142,13 +148,13 @@ body{
 }
 
 .foto img{
-    width:100%;
+    max-width:250px;
+    margin:auto;
     border-radius:18px;
     object-fit:cover;
 }
 
 .hero{
-    grid-area:hero;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -156,28 +162,19 @@ body{
 
 .hero h1{
     font-family:'Orbitron',sans-serif;
-    font-size:3rem;
+    font-size:clamp(2rem,4vw,2.8rem);
+    line-height:1.1;
     color:var(--cyan);
-
-    text-shadow:
-        0 0 6px var(--cyan),
-        0 0 6px var(--cyan);
 }
 
 .hero h2{
-    margin-bottom:15px;
-    color:var(--cyan-soft);
+    font-size:1.1rem;
+    margin-bottom:1rem;
 }
-/*
-#proyectos{
-    display:flex;
-    flex-direction: column;
-    gap:10px;
-}
-*/
+
 .hero p{
-    max-width:650px;
-    line-height:1.8;
+    max-width:65ch;
+    line-height:1.7;
 }
 
 .about{
@@ -201,7 +198,13 @@ body{
 }
 
 .skills{
-    grid-area:skills;
+    display:flex;
+    flex-wrap:wrap;
+    gap:.75rem;
+}
+
+.skills .btn-neon{
+    margin-top:0;
 }
 
 .card h3{
@@ -210,27 +213,21 @@ body{
     margin-bottom:15px;
 }
 
-/*.projects-grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1rem;
-    flex-grow: 1;
-}*/
-
 .project-item{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    color: white;
-    padding:15px;
-    margin-top:15px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:1rem;
+
+    color:white;
+    padding:10px;
+    margin-top:8px;
+
     border:1px solid var(--border);
     border-radius:14px;
-    background-size: cover;
-    background-position: center;
 }
 .project-item img{
-    max-width: 400px;
+    width:100%;
+    border-radius:12px;
 }
 .project-item p{
     margin-top: 1rem;
@@ -261,11 +258,6 @@ body{
 
 
 
-* {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
 
     /* Carousel Container */
     .carousel-container {
@@ -299,7 +291,7 @@ body{
     /* Navigation Buttons */
     .carousel-btn {
       position: absolute;
-      top: 50%;
+      bottom: 50%;
       transform: translateY(-50%);
       background-color: var(--cyan);
       color: white;
@@ -307,7 +299,7 @@ body{
       font-size: 16px;
       padding: 12px 16px;
       cursor: pointer;
-      border-radius: 50%;
+      border-radius: 5px;
       transition: background-color 0.3s;
       user-select: none;
       z-index: 10;
@@ -321,8 +313,8 @@ body{
         0 0 30px var(--cyan);
     }
 
-    .prev-btn { left: 15px; }
-    .next-btn { right: 15px; }
+    .prev-btn { left: 10px; }
+    .next-btn { right: 10px; }
 
     /* Indicator Dots */
     .carousel-indicators {
@@ -355,67 +347,73 @@ body{
 
 
 
-@media(max-width:1000px){
+@media (min-width:1200px){
 
     .bento-container{
 
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:
+            1fr
+            1fr
+            1fr
+            1fr;
 
         grid-template-areas:
-        "photo hero"
-        "about about"
-        "projects projects"
-        "projects projects"
-        "github skills"
-        "linkedin skills"
-        "cv skills";
+            "photo hero hero hero"
+            "about about about about"
+            "github projects projects projects"
+            "linkedin projects projects projects"
+            "cv projects projects projects"
+            "skills skills skills skills";
     }
 }
 
-@media(max-width:700px){
+@media (min-width:767px){
+
+    .bento-container{
+
+        grid-template-columns: 1fr 2fr;
+
+        grid-template-areas:
+            "photo hero"
+            "about about"
+            "projects projects"
+            "github linkedin"
+            "cv skills";
+    }
+
+    .project-item{
+        grid-template-columns: 1fr 1fr;
+        align-items:center;
+    }
+}
+
+@media (max-width:768px){
+
+    .menu-btn{
+        display:block;
+        font-size:1.8rem;
+        cursor:pointer;
+    }
 
     .nav-links{
         display:none;
-        position:absolute;
-        top:80px;
-        right:20px;
-        flex-direction:column;
 
-        background:#08101f;
-        padding:20px;
-        border-radius:15px;
+        position:absolute;
+        top:100%;
+        left:1rem;
+        right:1rem;
+
+        flex-direction:column;
+        gap:1rem;
+
+        padding:1rem;
+
+        background:var(--bg);
+        border:1px solid var(--border);
+        border-radius:16px;
     }
 
     .nav-links.active{
         display:flex;
-    }
-
-    .menu-btn{
-        display:block;
-    }
-
-    .bento-container{
-        grid-template-columns:1fr;
-
-        grid-template-areas:
-        "photo"
-        "hero"
-        "about"
-        "projects"
-        "github"
-        "linkedin"
-        "cv"
-        "skills";
-    }
-    #proyectos{
-        display:flex;
-        flex-direction:column;
-    }
-    .projects-grid{
-        display:grid;
-        grid-template-columns:1fr;
-    }
-    .hero h1{
-        font-size:2.2rem;
     }
 }
