@@ -1,3 +1,4 @@
+//Background effect---------------------------------------------------
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
 
@@ -36,43 +37,42 @@ window.addEventListener("mousemove", (e) => {
 });
 
 
+//Carousel Script------------------------------------------------------
+const slidesContainer = document.querySelector('.carousel-slides');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const dots = document.querySelectorAll('.dot');
 
+let currentIndex = 0;
+const totalSlides = slides.length;
 
-    const slidesContainer = document.querySelector('.carousel-slides');
-    const slides = document.querySelectorAll('.slide');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-    const dots = document.querySelectorAll('.dot');
+// Function to update the carousel position and dots
+function updateCarousel() {
+  // Shift slides horizontally by 100% * current index
+  slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+  
+  // Update active dot indicator
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[currentIndex].classList.add('active');
+}
 
-    let currentIndex = 0;
-    const totalSlides = slides.length;
+// Next Button Event
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % totalSlides; // Loops back to 0 at the end
+  updateCarousel();
+});
 
-    // Function to update the carousel position and dots
-    function updateCarousel() {
-      // Shift slides horizontally by 100% * current index
-      slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-      
-      // Update active dot indicator
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[currentIndex].classList.add('active');
-    }
+// Previous Button Event
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Loops to last slide at 0
+  updateCarousel();
+});
 
-    // Next Button Event
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % totalSlides; // Loops back to 0 at the end
-      updateCarousel();
-    });
-
-    // Previous Button Event
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Loops to last slide at 0
-      updateCarousel();
-    });
-
-    // Dot Indicators Click Event
-    dots.forEach(dot => {
-      dot.addEventListener('click', (e) => {
-        currentIndex = parseInt(e.target.dataset.index);
-        updateCarousel();
-      });
-    });
+// Dot Indicators Click Event
+dots.forEach(dot => {
+  dot.addEventListener('click', (e) => {
+    currentIndex = parseInt(e.target.dataset.index);
+    updateCarousel();
+  });
+});
