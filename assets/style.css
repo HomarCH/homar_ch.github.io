@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap');
 
 :root{
-    --bg:#1a0714;
-    --card:#0b1224;
+    --bg:#000000;
+    --card:#ffffff;
 
-    --cyan:#ff008c;
-    --cyan-soft:#ff66c2;
+    --cyan:#59e6dd;
+    --cyan-soft:#45ceda61;
 
-    --text:#ffb9da;
+    --text:#45ceda;
 
-    --border:rgb(255, 84, 221);
+    --border:#45cedae4;
 }
 
 *{
@@ -42,8 +42,8 @@ img{
     position:fixed;
     inset:0;
     background:
-    linear-gradient(rgba(255, 0, 183, 0.149) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 0, 183, 0.149) 1px, transparent 1px);
+    linear-gradient(var(--cyan-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--cyan-soft) 1px, transparent 1px);
     background-size:40px 40px;
     z-index:-1;
 }
@@ -60,7 +60,7 @@ img{
     padding:12px 5%;
     backdrop-filter:blur(5px);
 
-    background:rgba(22, 5, 16, 0);
+    background:rgba(255, 3, 167, 0);
     border-bottom:1px solid var(--border);
 }
 
@@ -68,30 +68,23 @@ img{
     font-family:'Orbitron',sans-serif;
     font-size:1.4rem;
     color:var(--cyan);
-    text-shadow:
-        0 0 5px var(--cyan),
-        0 0 15px var(--cyan),
-        0 0 30px var(--cyan);
 }
 
 .nav-links{
     display:flex;
     gap:15px;
     list-style:none;
+    color: var(--border);
 }
 
 .nav-links a{
     text-decoration:none;
-    color:white;
+    color:var(--border);
     transition:.3s;
 }
 
 .nav-links a:hover{
     color:var(--cyan);
-
-    text-shadow:
-        0 0 5px var(--cyan),
-        0 0 15px var(--cyan);
 }
 
 .menu-btn{
@@ -103,7 +96,7 @@ img{
     margin: 0 auto;
     padding: 20px;
     display: grid;
-    gap: 12px;
+    gap: 24px;
     grid-template-columns: 1fr;
 
     grid-template-areas:
@@ -119,16 +112,14 @@ img{
 
 .card{
     min-width: 300px;
-    background:rgba(22, 5, 16, 0);
+    background-color:rgba(255, 3, 167, 0);
     border: 2px solid var(--border);
-    border-radius: 24px;
-    padding: 2rem;
-
+    border-radius: 12px;
+    overflow: hidden;
+    color: var(--border);
     backdrop-filter: blur(2px);
 
-    box-shadow:
-        0 0 5px rgba(255,0,183,.4),
-        inset 0 0 15px rgba(255,0,183,.05);
+    box-shadow: 6px 6px var(--border);
 
     transition:
         transform .3s ease,
@@ -137,10 +128,10 @@ img{
 
 .card:hover{
     transform: translateY(-3px);
+}
 
-    box-shadow:
-        0 0 15px rgba(255,0,183,.6),
-        0 0 30px rgba(255,0,183,.25);
+.card-text{
+    padding: 1rem;
 }
 
 .foto{
@@ -154,6 +145,7 @@ img{
     object-fit:cover;
 }
 
+
 .hero{
     display:flex;
     flex-direction:column;
@@ -163,13 +155,16 @@ img{
 .hero h1{
     font-family:'Orbitron',sans-serif;
     font-size:clamp(2rem,4vw,2.8rem);
-    line-height:1.1;
-    color:var(--cyan);
+    color:var(--bg);
 }
 
 .hero h2{
     font-size:1.1rem;
     margin-bottom:1rem;
+}
+
+a{
+    color: var(--border);
 }
 
 .hero p{
@@ -209,8 +204,14 @@ img{
 
 .card h3{
     font-family:'Orbitron',sans-serif;
-    color:var(--cyan);
+    color: var(--bg);
     margin-bottom:15px;
+}
+
+.titlebar{
+    background-color: var(--border);
+    width: 100%;
+    padding: 1rem;
 }
 
 .project-item{
@@ -218,7 +219,7 @@ img{
     grid-template-columns:1fr;
     gap:1rem;
 
-    color:white;
+    color:var(--border);
     padding:10px;
     margin-top:8px;
 
@@ -234,11 +235,11 @@ img{
 }
 .btn-neon{
     display:inline-block;
-    margin-top:20px;
+    margin:5px;
     padding:12px 22px;
-
-    color:var(--cyan);
-    border:1px solid var(--cyan);
+    
+    color:var(--border);
+    border:1px solid var(--border);
 
     border-radius:10px;
     text-decoration:none;
@@ -247,13 +248,8 @@ img{
 }
 
 .btn-neon:hover{
-    background:var(--cyan);
+    background:var(--border);
     color:white;
-
-    box-shadow:
-        0 0 10px var(--cyan),
-        0 0 25px var(--cyan),
-        0 0 50px var(--cyan);
 }
 
 
@@ -307,10 +303,6 @@ img{
 
     .carousel-btn:hover {
       background-color: var(--cyan-soft);
-        box-shadow:
-        0 0 5px var(--cyan),
-        0 0 15px var(--cyan),
-        0 0 30px var(--cyan);
     }
 
     .prev-btn { left: 10px; }
@@ -330,7 +322,7 @@ img{
     .dot {
       width: 12px;
       height: 12px;
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: var(--border);
       border-radius: 25%;
       cursor: pointer;
       transition: background-color 0.3s;
@@ -339,10 +331,6 @@ img{
     .dot.active {
       background-color: white;
       transform: scale(1.2);
-      box-shadow:
-        0 0 5px var(--cyan),
-        0 0 15px var(--cyan),
-        0 0 30px var(--cyan);
     }
 
 
@@ -351,18 +339,14 @@ img{
 
     .bento-container{
 
-        grid-template-columns:
-            1fr
-            1fr
-            1fr
-            1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
 
         grid-template-areas:
             "photo hero hero hero"
             "about about about about"
-            "github projects projects projects"
-            "linkedin projects projects projects"
-            "cv projects projects projects"
+            "projects projects projects projects"
+            "projects projects projects projects"
+            "github github projects projects"
             "skills skills skills skills";
     }
 }
