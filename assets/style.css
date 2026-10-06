@@ -34,7 +34,7 @@ body{
 }
 
 img{
-    display:block;
+    display:flex;
     max-width:100%;
     height:auto;
 }
@@ -69,6 +69,7 @@ img{
     font-family:'Orbitron',sans-serif;
     font-size:1.4rem;
     color:var(--cyan);
+    text-shadow: 0 0 5px var(--cyan), 0 0 10px var(--cyan), 0 0 20px var(--cyan);
 }
 
 .nav-links{
@@ -93,29 +94,31 @@ img{
 }
 
 .bento-container{
-    max-width:1100px;
+    max-width:1200px;
     margin: 0 auto;
     padding: 20px;
     display: grid;
     gap: 24px;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
     grid-template-areas:
-        "photo"
-        "hero"
-        "about"
-        "projects"
-        "github"
-        "linkedin"
-        "cv"
-        "skills";
+        "photo hero hero hero"
+        "about about about about"
+        "pokedex pokedex pokedex pokedex"
+        "calc calc calc calc"
+        "keso keso keso keso"
+        "sk8 sk8 sk8 sk8"
+        "skills skills skills skills"
+        "github github linkedin linkedin"
+        "cv cv cv cv"
+        ;
 }
 
 .card{
     min-width: 300px;
     background-color:rgba(255, 3, 167, 0);
-    border: 2px solid var(--border);
-    border-radius: 12px;
+    border: 3px solid var(--border);
+    border-radius: 18px;
     overflow: hidden;
     color: var(--border);
     backdrop-filter: blur(2px);
@@ -150,12 +153,12 @@ img{
 .hero{
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    grid-area:hero;
 }
 
 .hero h1{
     font-family:'Orbitron',sans-serif;
-    font-size:clamp(2rem,4vw,2.8rem);
+
     color:var(--bg);
 }
 
@@ -177,26 +180,50 @@ a{
     grid-area:about;
 }
 
-.projects{
-    grid-area:projects;
+/*.projects{
+    grid-area: projects;
+}*/
+
+.pokedex{
+    grid-area: pokedex;
+}
+
+#pokedex img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 18px;
+    object-position: 50% 50%;
+}
+
+.calc{
+    grid-area: calc;
+}
+
+.keso{
+    grid-area: keso;
+}
+
+.sk8{
+    grid-area: sk8;
 }
 
 .github{
-    grid-area:github;
+    grid-area: github;
 }
 
 .linkedin{
-    grid-area:linkedin;
+    grid-area: linkedin;
 }
 
 .cv{
-    grid-area:cv;
+    grid-area: cv;
 }
 
 .skills{
     display:flex;
     flex-wrap:wrap;
     gap:.75rem;
+    grid-area: skills;
 }
 
 .skills .btn-neon{
@@ -216,6 +243,10 @@ a{
 }
 
 .project-item{
+    justify-content:center;
+    align-items:center;
+    align-content:center;
+    justify-items:center;
     display:grid;
     grid-template-columns:1fr;
     gap:1rem;
@@ -336,7 +367,243 @@ a{
 
 
 
-@media (min-width:1200px){
+    /* Carousel Container 2*/
+    .carousel-container2 {
+      position: relative;
+      max-width: 100%;
+      height: auto;
+      overflow:hidden;
+      border-radius: 10px;
+    }
+
+    /* Slides Wrapper */
+    .carousel-slides2 {
+      display: flex;
+      max-width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    /* Individual Slide */
+    .slide2 {
+      min-width: 100%;
+      height: 100%;
+    }
+
+    .slide2 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures images scale without distorting */
+    }
+
+    /* Navigation Buttons */
+    .carousel-btn2 {
+      position: absolute;
+      bottom: 1rem;
+      transform: translateY(-50%);
+      background-color: var(--cyan);
+      color: white;
+      border: none;
+      font-size: 16px;
+      padding: 12px 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      user-select: none;
+      z-index: 10;
+    }
+
+    .carousel-btn2:hover {
+      background-color: var(--cyan-soft);
+    }
+
+    .prev-btn2 { left: 10px; }
+    .next-btn2 { right: 10px; }
+
+    /* Indicator Dots */
+    .carousel-indicators2 {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .dot2 {
+      width: 12px;
+      height: 12px;
+      background-color: var(--border);
+      border-radius: 25%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .dot2.active {
+      background-color: white;
+      transform: scale(1.2);
+    }
+
+
+    /* Carousel Container 3*/
+    .carousel-container3 {
+      position: relative;
+      max-width: 100%;
+      height: auto;
+      overflow:hidden;
+      border-radius: 10px;
+    }
+
+    /* Slides Wrapper */
+    .carousel-slides3 {
+      display: flex;
+      max-width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    /* Individual Slide */
+    .slide3 {
+      min-width: 100%;
+      height: 100%;
+    }
+
+    .slide3 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures images scale without distorting */
+    }
+
+    /* Navigation Buttons */
+    .carousel-btn3 {
+      position: absolute;
+      bottom: 1rem;
+      transform: translateY(-50%);
+      background-color: var(--cyan);
+      color: white;
+      border: none;
+      font-size: 16px;
+      padding: 12px 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      user-select: none;
+      z-index: 10;
+    }
+
+    .carousel-btn3:hover {
+      background-color: var(--cyan-soft);
+    }
+
+    .prev-btn3 { left: 10px; }
+    .next-btn3 { right: 10px; }
+
+    /* Indicator Dots */
+    .carousel-indicators3 {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .dot3 {
+      width: 12px;
+      height: 12px;
+      background-color: var(--border);
+      border-radius: 25%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .dot3.active {
+      background-color: white;
+      transform: scale(1.2);
+    }
+
+    /* Carousel Container 4*/
+    .carousel-container4 {
+      position: relative;
+      max-width: 100%;
+      height: auto;
+      overflow:hidden;
+      border-radius: 10px;
+    }
+
+    /* Slides Wrapper */
+    .carousel-slides4 {
+      display: flex;
+      max-width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    /* Individual Slide */
+    .slide4 {
+      min-width: 100%;
+      height: 100%;
+    }
+
+    .slide4 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensures images scale without distorting */
+    }
+
+    /* Navigation Buttons */
+    .carousel-btn4 {
+      position: absolute;
+      bottom: 1rem;
+      transform: translateY(-50%);
+      background-color: var(--cyan);
+      color: white;
+      border: none;
+      font-size: 16px;
+      padding: 12px 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      user-select: none;
+      z-index: 10;
+    }
+
+    .carousel-btn4:hover {
+      background-color: var(--cyan-soft);
+    }
+
+    .prev-btn4 { left: 10px; }
+    .next-btn4 { right: 10px; }
+
+    /* Indicator Dots */
+    .carousel-indicators4 {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .dot4 {
+      width: 12px;
+      height: 12px;
+      background-color: var(--border);
+      border-radius: 25%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .dot4.active {
+      background-color: white;
+      transform: scale(1.2);
+    }
+
+
+/*@media (min-width:1000px){
 
     .bento-container{
 
@@ -345,24 +612,23 @@ a{
         grid-template-areas:
             "photo hero hero hero"
             "about about about about"
-            "projects projects projects projects"
-            "projects projects projects projects"
-            "github github projects projects"
+            "pokedex pokedex pokedex pokedex"
+            "github github linkedin linkedin"
             "skills skills skills skills";
     }
-}
-
-@media (min-width:767px){
+}*/
+/*
+@media (min-width:1000px){
 
     .bento-container{
 
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
 
         grid-template-areas:
-            "photo hero"
-            "about about"
-            "projects projects"
-            "github linkedin"
+            "photo hero hero hero"
+            "about about about about"
+            "pokedex pokedex pokedex pokedex"
+            "github github linkedin linkedin"
             "cv skills";
     }
 
@@ -370,9 +636,25 @@ a{
         grid-template-columns: 1fr 1fr;
         align-items:center;
     }
-}
+}*/
 
 @media (max-width:768px){
+
+    .bento-container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "photo"
+            "hero"
+            "about"
+            "pokedex"
+            "calc"
+            "keso"
+            "sk8"
+            "github"
+            "linkedin"
+            "cv"
+            "skills";
+    }
 
     .menu-btn{
         display:block;

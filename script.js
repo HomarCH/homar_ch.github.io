@@ -26,8 +26,8 @@ window.addEventListener("mousemove", (e) => {
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
 
-        const rotateX = (y - centerY) / 40;
-        const rotateY = (centerX - x) / 40;
+        const rotateX = (y - centerY) / 80;
+        const rotateY = (centerX - x) / 80;
 
         card.style.transform =
         `perspective(1000px)
@@ -37,42 +37,123 @@ window.addEventListener("mousemove", (e) => {
 });
 
 
-//Carousel Script------------------------------------------------------
-const slidesContainer = document.querySelector('.carousel-slides');
-const slides = document.querySelectorAll('.slide');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-const dots = document.querySelectorAll('.dot');
+// =====================================================
+// FUNCIÓN REUTILIZABLE PARA CARRUSELES
+// =====================================================
 
-let currentIndex = 0;
-const totalSlides = slides.length;
+function crearCarousel(
+    slidesContainerSelector,
+    slideSelector,
+    prevBtnSelector,
+    nextBtnSelector,
+    dotSelector
+) {
 
-// Function to update the carousel position and dots
-function updateCarousel() {
-  // Shift slides horizontally by 100% * current index
-  slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-  
-  // Update active dot indicator
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[currentIndex].classList.add('active');
+    const slidesContainer = document.querySelector(slidesContainerSelector);
+    const slides = document.querySelectorAll(slideSelector);
+    const prevBtn = document.querySelector(prevBtnSelector);
+    const nextBtn = document.querySelector(nextBtnSelector);
+    const dots = document.querySelectorAll(dotSelector);
+
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+
+    // Actualizar posición del carrusel
+    function updateCarousel() {
+
+        slidesContainer.style.transform =
+            `translateX(-${currentIndex * 100}%)`;
+
+
+        // Actualizar los dots
+        dots.forEach(dot => {
+            dot.classList.remove('active');
+        });
+
+
+        if (dots[currentIndex]) {
+            dots[currentIndex].classList.add('active');
+        }
+    }
+
+
+    // Botón siguiente
+    nextBtn.addEventListener('click', () => {
+
+        currentIndex =
+            (currentIndex + 1) % totalSlides;
+
+        updateCarousel();
+    });
+
+
+    // Botón anterior
+    prevBtn.addEventListener('click', () => {
+
+        currentIndex =
+            (currentIndex - 1 + totalSlides) % totalSlides;
+
+        updateCarousel();
+    });
+
+
+    // Dots
+    dots.forEach(dot => {
+
+        dot.addEventListener('click', (e) => {
+
+            currentIndex =
+                parseInt(e.currentTarget.dataset.index);
+
+            updateCarousel();
+        });
+
+    });
+
+
+    // Estado inicial
+    updateCarousel();
 }
 
-// Next Button Event
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % totalSlides; // Loops back to 0 at the end
-  updateCarousel();
-});
 
-// Previous Button Event
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Loops to last slide at 0
-  updateCarousel();
-});
+// =====================================================
+// INICIALIZAR CARRUSELES
+// =====================================================
 
-// Dot Indicators Click Event
-dots.forEach(dot => {
-  dot.addEventListener('click', (e) => {
-    currentIndex = parseInt(e.target.dataset.index);
-    updateCarousel();
-  });
-});
+// Primer carrusel
+crearCarousel(
+    '.carousel-slides',
+    '.slide',
+    '.prev-btn',
+    '.next-btn',
+    '.dot'
+);
+
+
+// Segundo carrusel
+crearCarousel(
+    '.carousel-slides2',
+    '.slide2',
+    '.prev-btn2',
+    '.next-btn2',
+    '.dot2'
+);
+
+// Tercer carrusel
+crearCarousel(
+    '.carousel-slides3',
+    '.slide3',
+    '.prev-btn3',
+    '.next-btn3',
+    '.dot3'
+);
+
+// Cuarto carrusel
+crearCarousel(
+    '.carousel-slides4',
+    '.slide4',
+    '.prev-btn4',
+    '.next-btn4',
+    '.dot4'
+);
