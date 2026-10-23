@@ -27,8 +27,7 @@ body{
     color:var(--text);
     font-family:'VT323',monospace;
     font-size:1.5rem;
-    align-content: center;
-    justify-items: center;
+
     min-height:100vh;
     overflow-x:hidden;
 }
