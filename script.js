@@ -1,3 +1,4 @@
+
 //Background effect---------------------------------------------------
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
@@ -11,7 +12,7 @@ document.querySelectorAll(".nav-links a").forEach(link => {
         navLinks.classList.remove("active");
     });
 });
-
+/*
 const cards = document.querySelectorAll(".card");
 
 window.addEventListener("mousemove", (e) => {
@@ -35,7 +36,7 @@ window.addEventListener("mousemove", (e) => {
         rotateY(${rotateY * -0.1}deg)`;
     });
 });
-
+*/
 
 // =====================================================
 // FUNCIÓN REUTILIZABLE PARA CARRUSELES

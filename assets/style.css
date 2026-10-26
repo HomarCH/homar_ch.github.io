@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"');
 :root{
-    --bg:#000000;
-    --card:#ffffff;
+    --bg:#ffafcc;
+    --card:#ffd7e6;
 
-    --cyan:#59e6dd;
-    --cyan-soft:#45ceda61;
+    --w:#ffffff;
+    --titlebar:#fa7eac;
 
-    --text:#45ceda;
+    --text:#bde0fe;
 
-    --border:#45cedae4;
+    --border:#f16196;
 }
 
 *{
@@ -42,8 +42,8 @@ img{
     position:fixed;
     inset:0;
     background:
-    linear-gradient(var(--cyan-soft) 1px, transparent 1px),
-    linear-gradient(90deg, var(--cyan-soft) 1px, transparent 1px);
+    linear-gradient(var(--card) 1px, transparent 1px),
+    linear-gradient(90deg, var(--card) 1px, transparent 1px);
     background-size:40px 40px;
     z-index:-1;
 }
@@ -57,17 +57,18 @@ img{
     justify-content:space-between;
     align-items:center;
 
-    padding:12px 5%;
+    padding:20px 5%;
     backdrop-filter:blur(5px);
 
-    background:rgba(255, 3, 167, 0);
-    border-bottom:1px solid var(--border);
+    background:var(--card);
+    border-bottom:5px solid var(--border);
 }
 
 .logo{
     font-family:'Orbitron',sans-serif;
     font-size:1.4rem;
-    color:var(--cyan);
+    font-weight: bolder;
+    color:var(--border);
     text-shadow: 0 0 5px var(--cyan), 0 0 10px var(--cyan), 0 0 20px var(--cyan);
 }
 
@@ -75,17 +76,21 @@ img{
     display:flex;
     gap:15px;
     list-style:none;
-    color: var(--border);
+    color: var(--text);
 }
 
 .nav-links a{
     text-decoration:none;
     color:var(--border);
     transition:.3s;
+    font-size: x-large;
 }
 
 .nav-links a:hover{
-    color:var(--cyan);
+    text-decoration: underline;
+}
+.nav-links a:active{
+  transform: rotate(5deg)
 }
 
 .menu-btn{
@@ -108,6 +113,7 @@ img{
         "keso keso keso keso"
         "sk8 sk8 sk8 sk8"
         "skills skills skills skills"
+        "soft soft soft soft"
         "github github linkedin linkedin"
         "cv cv cv cv"
         ;
@@ -115,8 +121,8 @@ img{
 
 .card{
     min-width: 300px;
-    background-color:rgba(255, 3, 167, 0);
-    border: 3px solid var(--border);
+    background-color:var(--card);
+    border: 5px solid var(--border);
     border-radius: 18px;
     overflow: hidden;
     color: var(--border);
@@ -158,12 +164,13 @@ img{
 .hero h1{
     font-family:'Orbitron',sans-serif;
 
-    color:var(--bg);
+    color:var(--card);
 }
 
 .hero h2{
-    font-size:1.1rem;
+    font-size:large;
     margin-bottom:1rem;
+    color:var(--border);
 }
 
 a{
@@ -225,18 +232,24 @@ a{
     grid-area: skills;
 }
 
+.soft{
+  grid-area:soft;
+  display:flex;
+  flex-wrap:wrap;
+  gap:.75rem;
+}
+
 .skills .btn-neon{
     margin-top:0;
 }
 
 .card h3{
     font-family:'Orbitron',sans-serif;
-    color: var(--bg);
-    margin-bottom:15px;
+    color: var(--card);
 }
 
 .titlebar{
-    background-color: var(--border);
+    background-color: var(--titlebar);
     width: 100%;
     padding: 1rem;
 }
@@ -270,7 +283,7 @@ a{
     padding:12px 22px;
     
     color:var(--border);
-    border:1px solid var(--border);
+    border:1px solid var(--titlebar);
 
     border-radius:10px;
     text-decoration:none;
@@ -338,8 +351,7 @@ input{
     .carousel-btn {
       position: absolute;
       bottom: 1rem;
-      transform: translateY(-50%);
-      background-color: var(--cyan-soft);
+      background-color: var(--border);
       color: white;
       border: none;
       font-size: 16px;
@@ -350,11 +362,12 @@ input{
       user-select: none;
       z-index: 10;
     }
-
     .carousel-btn:hover {
-      background-color: var(--cyan);
+      background-color: var(--titlebar);
     }
-
+    .carousel-btn:active{
+      transform: translateY(5px);
+    }
     .prev-btn { left: 10px; }
     .next-btn { right: 10px; }
 
@@ -671,13 +684,15 @@ input{
             "github"
             "linkedin"
             "cv"
-            "skills";
+            "skills"
+            "soft";
     }
 
     .menu-btn{
         display:block;
         font-size:1.8rem;
         cursor:pointer;
+        color: var(--border);
     }
 
     .nav-links{
@@ -694,7 +709,7 @@ input{
         padding:1rem;
 
         background:var(--bg);
-        border:1px solid var(--border);
+        border:5px solid var(--border);
         border-radius:16px;
     }
 
