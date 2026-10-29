@@ -97,6 +97,25 @@ img{
     display:none;
 }
 
+.btn-lan{
+    padding: 1rem;
+    margin: 10px;
+    background-color:var(--card);
+    border: 5px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    color: var(--border);
+    backdrop-filter: blur(2px);
+    font-family:'VT323',monospace;
+    font-size: 1.2rem;
+    box-shadow: 6px 6px var(--border);
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-lan:active{
+  transform: translateY(3px);
+}
+
 .bento-container{
     max-width:1200px;
     margin: 0 auto;
@@ -150,7 +169,7 @@ img{
 .foto img{
     max-width:250px;
     margin:auto;
-    border-radius:18px;
+    border-radius:16px;
     object-fit:cover;
 }
 
@@ -163,7 +182,6 @@ img{
 
 .hero h1{
     font-family:'Orbitron',sans-serif;
-
     color:var(--card);
 }
 

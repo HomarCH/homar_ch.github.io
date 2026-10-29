@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio HomarCH</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+    <div class="background-grid"></div>
+
+    <nav class="navbar">
+        <div class="logo">Homar-CH</div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#pokedex">Projects</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="https://github.com/HomarCH" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/homarcarmona" target="_blank">LinkedIn</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="form.html" target="_blank">Contact</a></li>
+        </ul>
+
+        <div class="menu-btn">✚</div>
+    </nav>
+
+    <div class="lan" style="display:flex; justify-content: flex-end;">
+        <a href="index.html" class="btn-lan">Ver en español</a>
+    </div>
+
+    <main class="bento-container" id="home">
+
+        <section class="card foto">
+        <div class="card-text">    
+            <img src="assets\img\java_developer_homar.jpg" alt="Foto de perfil de Homar Carmona">
+        </div>
+        </section>
+        <!---------------------------------------------------------------->
+        <section class="card hero">
+            <div class="titlebar">
+                <marquee scrolldelay="60">
+                    <h1>Homar Carmona</h1>
+                </marquee>
+            </div>
+            <div class="card-text">
+                <h2>Jr Java Full Stack & Industrial Designer</h2>
+                <p>
+                    Transforming ideas into attractive and functional digital experiences.
+                </p>
+            </div>
+        </section>
+        <!---------------------------------------------------------------->
+        <section class="card about" id="about">
+            <div class="titlebar">
+            <h3>About me</h3>
+            </div>
+            <div class="card-text">
+            <p>
+                Junior Full-Stack Java Developer and Industrial Designer
+                with a preference for web design and user experience. I enjoy
+                applying my design and creative experience to the digital world.
+                I enjoy learning and exploring new areas, or working
+                with people who have different knowledge and perspectives, so I can make
+                better solutions.
+            </p>
+            </div>
+        </section>
+
+        <!---------------------------------------------------------------->
+
+        <section class="card pokedex" id="pokedex">
+            <div class="titlebar">
+                <h3>Pokédex API</h3>
+            </div>
+            <div class="card-text">
+                <h4>API Pokédex Project</h4>
+                <p>API consuming Pokédex that shows Pokémon and its information.
+                I used the pokeapi.co API for the information for each Pokémon.<br>
+                In this program I wanted to explore further in stylizing it with an aesthetic
+                alluding to Pokémon and Pixel-art, also considering the color palette.</p>
+                <p><a href="https://homarch.github.io/pokedex-api/" target="_blank" class="btn-neon">Link to Pokédex.</a></p>
+            </div>           
+            <div class="carousel-container">
+                <!--Slides-->
+                <div class="carousel-slides">
+                    <div class="slide">
+                        <div class="project-item">
+                            <img src="./assets/img/poke_api.png">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="project-item">
+                            <img src="./assets/img/poke_api2.png">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="project-item">
+                            <img src="./assets/img/poke_api3.png" style="width: clamp(200px, 100%, 350px);">
+                        </div>
+                    </div>                                       
+                </div>              
+            </div>
+
+                <!--Navigation Buttons-->
+                <button class="carousel-btn prev-btn" aria-label="Previous Slide">&#10094;</button>
+                <button class="carousel-btn next-btn" aria-label="Next Slide">&#10095;</button>
+
+                <!--Indicators-->
+                <div class="carousel-indicators">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="card calc" id="calc">
+            <div class="titlebar">
+                <h3>Temperature conversor</h3>
+            </div>
+            <div class="card-text">
+                <h4>Project: Temperature units conversor (°C, °F & K)</h4>
+                <p>HTML page to convert temperature units: Celsius to Kelvin and Fahrenheit and vice versa.<br>
+                I wanted to give it a minimalist style inspired by Pixel-art.</p>
+                <a href="https://homarch.github.io/conversor-de-temperatura.github.io/" target="_blank" class="btn-neon">
+                    Link to temperature conversor.
+                </a>
+            </div>           
+            <div class="carousel-container2">
+                <!--Slides-->
+                <div class="carousel-slides2">
+                    <div class="slide2">
+                        <div class="project-item">
+                            <img src="./assets/img/calc1.png" style="width: clamp(200px, 100%, 350px);">
+                        </div>
+                    </div>                              
+                </div>              
+            </div>
+
+                <!--Navigation Buttons-->
+                <button class="carousel-btn prev-btn2" aria-label="Previous Slide" style="display: none;">&#10094;</button>
+                <button class="carousel-btn next-btn2" aria-label="Next Slide" style="display: none;">&#10095;</button>
+
+                <!--Indicators-->
+                <div class="carousel-indicators2">
+                    <span class="dot2 active" data-index="0"></span>
+                </div>
+
+        </section>
+
+
+        <section class="card keso" id="keso">
+            <div class="titlebar">
+                <h3>Keso pastry shop E-commerce</h3>
+            </div>
+            <div class="card-text">
+                <h4>E-commerce for a local pastry shop.</h4>
+                <p>
+                    This was an integrated team project where we implemented both front-end and back-end development knowledge,
+                    and a workflow using Scrum, GitHub, and Kanban. We also swapped roles to become involved
+                    in different aspects of the project.
+                    Personally, I enjoyed the front-end portion the most, where we used tools like Figma and Bootstrap to design each
+                    page.
+                </p>
+                <p><a href="https://github.com/aggressxve/keso-relleno.git" target="_blank" class="btn-neon">Enlace a Keso Pastelería (Repositorio).</a></p>
+            </div>           
+            <div class="carousel-container3">
+                <!--Slides-->
+                <div class="carousel-slides3">
+                    <div class="slide3">
+                        <div class="project-item">
+                            <img src="./assets/img/keso.png" style="width: clamp(200px, 100%, 350px);">
+                        </div>
+                    </div>
+                    <div class="slide3">
+                        <div class="project-item">
+                            <img src="./assets/img/keso2.png">
+                        </div>
+                    </div>
+                    <div class="slide3">
+                        <div class="project-item">
+                            <img src="./assets/img/keso3.png" style="max-width: 350px;">
+                        </div>
+                    </div>
+                    <div class="slide3">
+                        <div class="project-item">
+                            <img src="./assets/img/Keso5.png">
+                        </div>
+                    </div>                                       
+                </div>              
+            </div>
+
+                <!--Navigation Buttons-->
+                <button class="carousel-btn prev-btn3" aria-label="Previous Slide">&#10094;</button>
+                <button class="carousel-btn next-btn3" aria-label="Next Slide">&#10095;</button>
+
+                <!--Indicators-->
+                <div class="carousel-indicators3">
+                    <span class="dot3 active" data-index="0"></span>
+                    <span class="dot3" data-index="1"></span>
+                    <span class="dot3" data-index="2"></span>
+                    <span class="dot3" data-index="3"></span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="card sk8" id="sk8">
+            <div class="titlebar">
+                <h3>HTML page SkateBros</h3>
+            </div>
+            <div class="card-text">
+                <h4>Hackaton: Online skate store</h4>
+                <p>HTML skate store page development, created as a team in a Hackaton event, where we had to create a store in a matter of hours,
+                using HTML, CSS and JavaScript or even Bootstrap, implementing catalog and shopping cart functionalities.
+                </p>
+                <p><a href="https://jessra21.github.io/SkateBros/" target="_blank" class="btn-neon">Link to SkateBros</a></p>
+            </div>           
+            <div class="carousel-container4">
+                <!--Slides-->
+                <div class="carousel-slides4">
+                    <div class="slide4">
+                        <div class="project-item">
+                            <img src="./assets/img/skatebros.png">
+                        </div>
+                    </div>
+                    <div class="slide4">
+                        <div class="project-item">
+                            <img src="./assets/img/skatebros2.png">
+                        </div>
+                    </div>
+                    <div class="slide4">
+                        <div class="project-item">
+                            <img src="./assets/img/skatebros3.png">
+                        </div>
+                    </div>                                       
+                </div>              
+            </div>
+
+                <!--Navigation Buttons-->
+                <button class="carousel-btn prev-btn4" aria-label="Previous Slide">&#10094;</button>
+                <button class="carousel-btn next-btn4" aria-label="Next Slide">&#10095;</button>
+
+                <!--Indicators-->
+                <div class="carousel-indicators4">
+                    <span class="dot4 active" data-index="0"></span>
+                    <span class="dot4" data-index="1"></span>
+                    <span class="dot4" data-index="2"></span>
+                </div>
+            </div>
+
+        </section>
+
+        <!---------------------------------------------------------------->
+        <section class="card github" id="github">
+            <div class="titlebar">
+                <h3>GitHub</h3>
+            </div>
+            <div class="card-text">
+            <p>GitHub repositories.</p>
+
+            <a href="https://github.com/HomarCH" class="btn-neon" target="_blank">
+                Visit my GitHub
+            </a>
+            </div>
+        </section>
+        <!---------------------------------------------------------------->
+        <section class="card linkedin" id="linkedin">
+            <div class="titlebar">
+                <h3>LinkedIn</h3>
+            </div>
+            <div class="card-text">
+                <p>Conect with me.</p>
+                <a href="https://www.linkedin.com/in/homarcarmona" class="btn-neon" target="_blank">
+                    Visit my profile
+                </a>
+            </div>
+        </section>
+        <!---------------------------------------------------------------->
+        <section class="card cv" id="cv">
+            <div class="titlebar">
+                <h3>Resume</h3>
+            </div>
+            <div class="card-text">
+                <p>Take a look at my resume.</p>
+                <a href="/assets/pdf/Homar de Jesús Carmona Hinojosa-Resume.pdf" download class="btn-neon">
+                    Download
+                </a>
+            </div>
+        </section>
+        <!---------------------------------------------------------------->
+        <section class="card skills" id="skills">
+            <div class="titlebar">
+                <h3>Hard skills</h3>
+            </div>
+            <div class="card-text">
+                <div class="btn-neon">
+                    <p>Java</p>
+                </div>
+                <div class="btn-neon">
+                    <p>JavaScript</p>
+                </div>
+                <div class="btn-neon">
+                    <p>HTML</p>
+                </div>
+                <div class="btn-neon">
+                    <p>CSS</p>
+                </div>
+                <div class="btn-neon">
+                    <p>Python</p>
+                </div>
+                <div class="btn-neon">
+                    <p>Figma</p>
+                </div>
+                <div class="btn-neon">
+                    <p>Procreate</p>
+                </div>
+                <div class="btn-neon">
+                    <p>Illustrator</p>
+                </div>
+                <div class="btn-neon">
+                    <p>SQL</p>
+                </div>
+                <div class="btn-neon">
+                    <p>GitHub</p>
+                </div>
+                <div class="btn-neon">
+                    <p>Bootstrap</p>
+                </div>
+                <div class="btn-neon">
+                    <p>N8L</p>
+                </div>
+                <div class="btn-neon">
+                    <p>IA</p>
+                </div>
+                <div class="btn-neon">
+                    <p>Modelado 3D</p>
+                </div>
+            </div>
+        </section>
+        <!---------------------------------------------------------------->
+        <section class="card soft" id="soft">
+            <div class="titlebar">
+                <h3>Soft skills</h3>
+            </div>
+            <div class="card-text">
+                <div class="btn-neon">
+                    <p>Detail-oriented</p>
+                </div>
+                <div class="btn-neon">
+                    <p>Self-learning</p>
+                </div>
+                <div class="btn-neon">
+                    <p>Teamwork</p>
+                </div>
+                <div class="btn-neon">
+                    <p>Future-oriented</p>
+                </div>
+                <div class="btn-neon">
+                    <p>Creativity</p>
+                </div>
+                <div class="btn-neon">
+                    <p>Adaptability</p>
+                </div>
+            </div>
+        </section>
+        <!---------------------------------------------------------------->
+    </main>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
